@@ -1,0 +1,36 @@
+[
+    {
+        "labelNairobi": [
+            "Midnight-04 AM",
+            "04 AM - 08 AM",
+            "08 AM -12 PM",
+            "12 PM - 04 PM",
+            "04 PM - 8 PM",
+            "08 PM - Midnight"
+        ],
+        "dataMombasa": [
+            133,
+            221,
+            783,
+            2478,
+            133,
+            221
+        ],
+        "dataNairobiCentral": [
+            408,
+            547,
+            675,
+            734,
+            408,
+            547
+        ],
+        "dataTestSensor2": [
+            408,
+            547,
+            675,
+            734,
+            408,
+            547
+        ]
+    }
+]
