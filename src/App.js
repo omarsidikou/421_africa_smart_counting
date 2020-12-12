@@ -16,9 +16,7 @@ function App() {
       </div>
       <div className="app__container">
         <div className="app__left">
-          <h1>A Lorem ipsum dolor sit.</h1>
-
-
+          <h1 style={{ fontSize: 17 }}>A Lorem ipsum dolor sit.</h1>
           <MapContainer />
         </div>
         <div className="app__right">

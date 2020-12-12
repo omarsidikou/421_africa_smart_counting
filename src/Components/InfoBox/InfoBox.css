@@ -1,0 +1,53 @@
+.infoBox {
+    flex: 1;
+    cursor: pointer !important;
+}
+.infoBox:not(:last-child) {
+    margin-right: 15px;
+}
+
+
+.infoBox__cases {
+    color: #E76F12;
+    font-weight: 600 !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.infoBox__deaths{
+    color: #cc1034;
+    font-weight: 600 !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.infoBox__recovered{
+    color: #7dd71d;
+    font-weight: 600 !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+
+.infoBox__total {
+    color: #6c6e72;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    margin-top: 15px !important;
+}
+
+.infoBox--selected{
+    border-top: 10px solid rgb(168, 61, 61) !important;
+}
+
+.infoBox--red{
+    border-color:red !important;
+}
+
+.infoBox--orange{
+    border-color:#E76F12  !important;
+}
+
+.infoBox--green{
+    border-color: #7dd71d  !important;
+}
