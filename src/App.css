@@ -1,0 +1,30 @@
+*{
+  /* margin: 0 !important; */
+  padding: 0 !important;
+}
+.app__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.app{
+  margin: 30px;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+body{
+  background-color: #f5f6fa;
+}
+
+.app__left{
+  flex: 0.7 !important;
+}
+
+.app__right {
+  flex: 0.3 !important;
+}

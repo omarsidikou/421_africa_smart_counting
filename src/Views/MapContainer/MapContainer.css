@@ -1,0 +1,79 @@
+.mapContainer {
+    height: 60vh;
+    width: 50vw;
+    background-color: white;
+    padding: 1rem !important;
+    border-radius: 20px;
+    margin: 50px !important;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  .mapContainerPopUp, .leaflet-popup-content-wrapper{
+    width: 500px !important;
+
+  }
+
+  .mapContainer__popUpCard{
+      display: flex;
+      align-items: center;
+      width: 475px;
+      margin: auto !important;
+  }
+  
+  .mapContainer .leaflet-container {
+    height: 100%;
+    padding: auto;
+    border-radius: 12px;
+  }
+  
+  .info-flag img {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .info-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .info-container {
+    width: 150px;
+    height: 250px;
+  }
+  
+  .info-flag {
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-radius: 8px;
+  }
+  
+  .info-confirmed,
+  .info-recovered,
+  .info-deaths {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .mapContainer__popUpafterNoonContainer{
+      padding: 10px;
+      flex: 1;
+      /* width: 200px; */
+
+  }
+
+  .mapContainer__popUpDayContainer{
+      flex: 1;
+      padding: 10px;
+      /* width: 400px !important; */
+
+  }
+
+  .mapContainer__popUpSingleContainer{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
