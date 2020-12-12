@@ -14,10 +14,10 @@ function InfoBox({ title, caseType, cases, isRed, isGreen, isOrange, active, tot
                     {title}
                 </Typography>
                 {/* Number of cases */}
-                <h2 className={`${isRed && 'infoBox__deaths'} ${isGreen && 'infoBox__recovered'} ${isOrange && 'infoBox__cases'}`}>Today {cases}</h2>
+                <h2 className={`${isRed && 'infoBox__deaths'} ${isGreen && 'infoBox__recovered'} ${isOrange && 'infoBox__cases'}`}>{new Date().toLocaleString()} {cases}</h2>
                 {/* Total */}
                 <Typography className="infoBox__total" color="textSecondary">
-                    Total {caseType} {total}
+                    Average of people count during the day {caseType} {total}
                 </Typography>
             </CardContent>
         </Card>

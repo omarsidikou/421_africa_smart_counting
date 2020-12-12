@@ -53,18 +53,18 @@ export default class ChartGraph extends Component {
                     {
                         label: "Mombasa Road (sensor_1)",
                         data: data,
-                        backgroundColor: "#3e95cd",
+                        backgroundColor: "gray",
 
                     },
                     {
                         label: "Nairobi_central (sensor_2)",
                         data: average,
-                        backgroundColor: "#3e95cd",
+                        backgroundColor: "green",
                     },
                     {
                         label: "Test_sensor_2",
                         data: test,
-                        backgroundColor: "#8e5ea2",
+                        backgroundColor: "orange",
                     },
                 ]
             },
@@ -100,8 +100,6 @@ export default class ChartGraph extends Component {
 
         return (
             <div>
-                <Typography color="secondary">#421 Africa smart Counting</Typography>
-                <Typography color="primary">Average people during the day for the city of Nairobi</Typography>
                 <div className={classes.barContainer}>
                     <canvas
                         id="myChart2"

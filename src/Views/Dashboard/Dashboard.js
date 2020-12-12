@@ -27,9 +27,9 @@ export default class Dashboard extends Component {
     componentDidMount() {
 
         const getALlJson = async () => {
-            // await fetch("https://ces-iot-scan-wifi-devices.s3-eu-west-1.amazonaws.com/africa_smart_counting/konnectData.json").then((data) => {
-            //     console.log(data);
-            // })
+            await fetch("https://ces-iot-scan-wifi-devices.s3-eu-west-1.amazonaws.com/africa_smart_counting/konnectData.json").then((data) => {
+                console.log(data);
+            })
             // axios({
             //     url: 'https://ces-iot-scan-wifi-devices.s3-eu-west-1.amazonaws.com/africa_smart_counting/konnectData.json',
             //     method: 'get'
@@ -80,7 +80,7 @@ export default class Dashboard extends Component {
             <div className={classes.container}>
                 <header>
                     <img src={chartIcon} alt="bar chart icon" />
-                    <h3 style={{ color: "gray" }}>Histogramme de données d'aujourd'hui</h3>
+                    <h3 style={{ color: "gray" }}>Average people during the day</h3>
                 </header>
 
                 {/* <div className={classes.buttonContainer}>
@@ -99,14 +99,16 @@ export default class Dashboard extends Component {
                     </button>
                 </div> */}
 
+
+
+                <ChartGraph data={dataMombasa} average={dataNairobiCentral} test={dataTestSensor2} labels={labelNairobi}
+                />
+
+                <h3 style={{ color: "gray" }}>People counting solution based on smartphone Wi-fi Device</h3>
                 <LineGraph
                     data={persMoyenNbre}
                     average={PollutionNbre}
                     labels={labels} />
-                <br />
-                <br />
-                <ChartGraph data={dataMombasa} average={dataNairobiCentral} test={dataTestSensor2} labels={labelNairobi}
-                />
 
             </div>
         )

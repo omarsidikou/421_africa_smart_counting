@@ -10,6 +10,15 @@
     z-index: 5;
 }
 
+.navBar__listItemText {
+    font-size: 29px !important;
+}
+
+.MuiAppBar-colorPrimary{
+    background-color: #843f09 !important;
+}
+
+/* .843f09 */
 .buttonComp{
     margin-top: 10px;
 }

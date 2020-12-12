@@ -1,6 +1,6 @@
 export const MenuItems = [
     {
-        title: 'Home',
+        title: '#421 Africa Smart Counting - City of Nairobi',
         url: "/",
         cName: "nav-links"
     },

@@ -50,7 +50,7 @@ function MapContainer() {
     // console.log(dataKonnect);
     return (
         <div className="mapContainer">
-            <MapLeafleat center={[9.1021, 9.1021]} zoom={4} scrollWheelZoom={true}>
+            <MapLeafleat center={[-1.303208, 36.7773567]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -62,79 +62,80 @@ function MapContainer() {
                                 <Popup className="mapContainerPopUp">
                                     <Card className="mapContainer__popUpCard">
                                         <div className="mapContainer__popUpDayContainer">
-                                            <Typography variant="h5">
-                                                {data[0].tranche_horaire_jour}
+                                            <Typography className='bodyTypo' variant="h5">
+                                                TimeFrame
                                             </Typography>
                                             <div className="mapContainer__popUpMainContainer">
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 00H à 04H du matin:
+                                                <Card>
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body1">
+                                                            Midnight - 04AM
                                                 </Typography>
                                                 &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen0004}<strong> personnes <br />
-                                                        </strong>{data[0].niveauPolution0004}%</strong> de polution
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen0004}</strong> personnes
+
                                                 </Typography>
-                                                </div>
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 04H à 08H du matin:
-                                                </Typography>
-                                                &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen0408}</strong> personnes <br />
-                                                        <strong>{data[0].niveauPolution0408}%</strong> de polution
-                                                </Typography>
-                                                </div>
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 08H à 12H du matin:
+                                                    </div>
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body2">
+                                                            De 04H à 08H
                                                 </Typography>
                                                 &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen0812}</strong> personnes <br />
-                                                        <strong>{data[0].niveauPolution0812}%</strong> de polution
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen0408}</strong> personnes <br />
+
+                                                        </Typography>
+                                                    </div>
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body2">
+                                                            De 08H à 12H
                                                 </Typography>
-                                                </div>
+                                                &nbsp;
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen0812}</strong> personnes <br />
+
+                                                        </Typography>
+                                                    </div>
+                                                </Card>
                                             </div>
                                         </div>
 
                                         <div className="mapContainer__popUpafterNoonContainer">
-                                            <Typography variant="h5">
-                                                {data[0].tranche_horaire_soir}
-                                            </Typography>
-                                            <div className="mapContainer__popUpMainContainer">
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 12H à 16H du matin:
+                                            <Card>
+                                                <div className="mapContainer__popUpMainContainer">
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body2">
+                                                            De 12H à 16H
                                                 </Typography>
                                                 &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen1216}</strong> personnes <br />
-                                                        <strong>{data[0].niveauPolution1216}%</strong> de polution
-                                                </Typography>
-                                                </div>
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 16H à 20H du matin:
-                                                </Typography>
-                                                &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen1620}</strong> personnes <br />
-                                                        <strong>{data[0].niveauPolution1620}%</strong> de polution
-                                                </Typography>
-                                                </div>
-                                                <div className="mapContainer__popUpSingleContainer">
-                                                    <Typography variant="body2">
-                                                        De 20H à 00H du matin:
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen1216}</strong> personnes <br />
+
+                                                        </Typography>
+                                                    </div>
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body2">
+                                                            De 16H à 20H
                                                 </Typography>
                                                 &nbsp;
-                                                <Typography variant="body1">
-                                                        <strong>{data[0].nbrePersMoyen2024}</strong> personnes <br />
-                                                        <strong>{data[0].niveauPolution2024}</strong>% de polution
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen1620}</strong> personnes <br />
+
+                                                        </Typography>
+                                                    </div>
+                                                    <div className="mapContainer__popUpSingleContainer">
+                                                        <Typography className='bodyTypo' variant="body2">
+                                                            De 20H à 00H
                                                 </Typography>
+                                                &nbsp;
+                                                <Typography className='bodyTypo' variant="body1">
+                                                            <strong>{data[0].nbrePersMoyen2024}</strong> personnes <br />
+
+                                                        </Typography>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Card>
                                         </div>
                                     </Card>
                                 </Popup>
