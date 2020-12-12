@@ -21,7 +21,8 @@ export default class LineGraph extends Component {
 
     buildChart = () => {
         const myChartRef = this.chartRef.current.getContext("2d");
-        const { data, average, labels } = this.props;
+        const { data, average, test, labels } = this.props;
+
 
         if (typeof myLineChart !== "undefined") myLineChart.destroy();
 
@@ -32,16 +33,22 @@ export default class LineGraph extends Component {
                 labels: labels,
                 datasets: [
                     {
-                        label: "Number of Person",
+                        label: "Mombasa Road (sensor_1)",
                         data: data,
                         fill: false,
-                        borderColor: "#6610f2"
+                        borderColor: "orange"
                     },
                     {
-                        label: "Percent of Polution",
+                        label: "Nairobi_central (sensor_2)",
                         data: average,
                         fill: false,
-                        borderColor: "#E0E0E0"
+                        borderColor: "green"
+                    },
+                    {
+                        label: "Test_sensor_2",
+                        data: test,
+                        fill: false,
+                        borderColor: "gray"
                     }
                 ]
             },

@@ -1,6 +1,7 @@
 .infoBox {
     flex: 1;
     cursor: pointer !important;
+    padding: 5px !important;
 }
 .infoBox:not(:last-child) {
     margin-right: 15px;
@@ -32,8 +33,9 @@
 .infoBox__total {
     color: #6c6e72;
     font-weight: 700 !important;
-    font-size: 0.8rem !important;
+    font-size: 1.1rem !important;
     margin-top: 15px !important;
+    margin-bottom: 15px !important;
 }
 
 .infoBox--selected{

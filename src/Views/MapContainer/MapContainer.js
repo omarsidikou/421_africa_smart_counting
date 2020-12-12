@@ -17,6 +17,8 @@ function MapContainer() {
                     "lat": data.lat,
                     "tranche_horaire_jour": data.tranche_horaire_jour,
                     "nbrePersMoyen0004": data.nbrePersMoyen0004,
+                    "data": data.data,
+                    "average": data.average,
                     "niveauPolution0004": data.niveauPolution0004,
                     "nbrePersMoyen0408": data.nbrePersMoyen0408,
                     "niveauPolution0408": data.niveauPolution0408,
@@ -57,87 +59,86 @@ function MapContainer() {
                 />
                 {
                     dataKonnect?.map((data) => {
+                        console.log(data);
                         return (
                             <Marker position={[data[0]?.long, data[0]?.lat]}>
                                 <Popup className="mapContainerPopUp">
-                                    <Card className="mapContainer__popUpCard">
-                                        <div className="mapContainer__popUpDayContainer">
-                                            <Typography className='bodyTypo' variant="h5">
-                                                TimeFrame
+                                    <div className="mapContainer__popUpDayContainer">
+                                        <Typography className='bodyTypo' variant="h5">
+                                            TimeFrame
                                             </Typography>
-                                            <div className="mapContainer__popUpMainContainer">
-                                                <Card>
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body1">
-                                                            Midnight - 04AM
-                                                </Typography>
-                                                &nbsp;
-                                                <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen0004}</strong> personnes
-
-                                                </Typography>
-                                                    </div>
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body2">
-                                                            De 04H à 08H
-                                                </Typography>
-                                                &nbsp;
-                                                <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen0408}</strong> personnes <br />
-
-                                                        </Typography>
-                                                    </div>
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body2">
-                                                            De 08H à 12H
-                                                </Typography>
-                                                &nbsp;
-                                                <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen0812}</strong> personnes <br />
-
-                                                        </Typography>
-                                                    </div>
-                                                </Card>
-                                            </div>
-                                        </div>
-
-                                        <div className="mapContainer__popUpafterNoonContainer">
+                                        <div className="mapContainer__popUpMainContainer">
                                             <Card>
-                                                <div className="mapContainer__popUpMainContainer">
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body2">
-                                                            De 12H à 16H
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body1">
+                                                        Midnight - 04AM
                                                 </Typography>
                                                 &nbsp;
                                                 <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen1216}</strong> personnes <br />
+                                                        <strong>{data[0].data[0]}</strong> personnes
 
-                                                        </Typography>
-                                                    </div>
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body2">
-                                                            De 16H à 20H
+                                                </Typography>
+                                                </div>
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body2">
+                                                        De 04H à 08H
                                                 </Typography>
                                                 &nbsp;
                                                 <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen1620}</strong> personnes <br />
+                                                        <strong>{data[0].data[1]}</strong> personnes <br />
 
-                                                        </Typography>
-                                                    </div>
-                                                    <div className="mapContainer__popUpSingleContainer">
-                                                        <Typography className='bodyTypo' variant="body2">
-                                                            De 20H à 00H
+                                                    </Typography>
+                                                </div>
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body2">
+                                                        De 08H à 12H
                                                 </Typography>
                                                 &nbsp;
                                                 <Typography className='bodyTypo' variant="body1">
-                                                            <strong>{data[0].nbrePersMoyen2024}</strong> personnes <br />
+                                                        <strong>{data[0].data[2]}</strong> personnes <br />
 
-                                                        </Typography>
-                                                    </div>
+                                                    </Typography>
                                                 </div>
                                             </Card>
                                         </div>
-                                    </Card>
+                                    </div>
+
+                                    <div className="mapContainer__popUpafterNoonContainer">
+                                        <Card>
+                                            <div className="mapContainer__popUpMainContainer">
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body2">
+                                                        De 12H à 16H
+                                                </Typography>
+                                                &nbsp;
+                                                <Typography className='bodyTypo' variant="body1">
+                                                        <strong>{data[0].data[3]}</strong> personnes <br />
+
+                                                    </Typography>
+                                                </div>
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body2">
+                                                        De 16H à 20H
+                                                </Typography>
+                                                &nbsp;
+                                                <Typography className='bodyTypo' variant="body1">
+                                                        <strong>{data[0].data[4]}</strong> personnes <br />
+
+                                                    </Typography>
+                                                </div>
+                                                <div className="mapContainer__popUpSingleContainer">
+                                                    <Typography className='bodyTypo' variant="body2">
+                                                        De 20H à 00H
+                                                </Typography>
+                                                &nbsp;
+                                                <Typography className='bodyTypo' variant="body1">
+                                                        <strong>{data[0].data[5]}</strong> personnes <br />
+
+                                                    </Typography>
+                                                </div>
+                                            </div>
+                                        </Card>
+                                    </div>
                                 </Popup>
                             </Marker>
                         )

@@ -4,7 +4,7 @@ import LineGraph from "../../Components/Dashboard/LineGraph";
 import chartIcon from "../../assets/chart-icon.svg";
 // import { managerData, nationalAverageData, yearLabels, managerQuarterData, nationalAverageQuarterData, quarterLabels } from "../../mockData";
 
-import all from '../../data/all.json';
+import data from '../../data/konnectData.json';
 import Nairobi from '../../data/Nairobi.json'
 import ChartGraph from '../../Components/Dashboard/ChartGraph';
 
@@ -35,7 +35,7 @@ export default class Dashboard extends Component {
             //     method: 'get'
             // }).then((response) => console.log(response))
         }
-        all.forEach((data) => {
+        data.forEach((data) => {
             this.setState({
                 persMoyenNbre: data.persMoyenNbre,
                 PollutionNbre: data.PollutionNbre,
@@ -106,9 +106,10 @@ export default class Dashboard extends Component {
 
                 <h3 style={{ color: "gray" }}>People counting solution based on smartphone Wi-fi Device</h3>
                 <LineGraph
-                    data={persMoyenNbre}
-                    average={PollutionNbre}
-                    labels={labels} />
+                    data={dataMombasa}
+                    average={dataNairobiCentral}
+                    test={dataTestSensor2}
+                    labels={labelNairobi} />
 
             </div>
         )
