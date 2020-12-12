@@ -62,9 +62,9 @@ function Navbar() {
                 <AppBar position="fixed">
                     <Toolbar component="nav">
                         <Container maxWidth="md" className={classes.navbarDisplayFlex}>
-                            <IconButton edge="start" aria-label="home">
+                            {/* <IconButton edge="start" aria-label="home">
                                 <AcUnit fontSize="large" />
-                            </IconButton>
+                            </IconButton> */}
 
                             <Hidden smDown>
                                 <List
@@ -73,7 +73,7 @@ function Navbar() {
                                     className={classes.navListDisplayFlex}
                                 >
                                     {MenuItems.map(({ cName, title, url }) => (
-                                        <ListItem button>
+                                        <ListItem key={cName} button>
                                             <ListItemText primary={title} />
                                         </ListItem>
                                     ))}

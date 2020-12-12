@@ -1,10 +1,9 @@
 .mapContainer {
     height: 60vh;
-    width: 50vw;
+    width: 90%;
     background-color: white;
     padding: 1rem !important;
     border-radius: 20px;
-    margin: 50px !important;
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
   }
 

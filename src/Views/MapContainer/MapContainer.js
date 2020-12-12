@@ -58,10 +58,9 @@ function MapContainer() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {
-                    dataKonnect?.map((data) => {
-                        console.log(data);
+                    dataKonnect?.map((data, index) => {
                         return (
-                            <Marker position={[data[0]?.long, data[0]?.lat]}>
+                            <Marker key={index} position={[data[0]?.long, data[0]?.lat]}>
                                 <Popup className="mapContainerPopUp">
                                     <div className="mapContainer__popUpDayContainer">
                                         <Typography className='bodyTypo' variant="h5">
@@ -69,7 +68,7 @@ function MapContainer() {
                                             </Typography>
                                         <div className="mapContainer__popUpMainContainer">
                                             <Card>
-                                                <div className="mapContainer__popUpSingleContainer">
+                                                <div className="mapCon  tainer__popUpSingleContainer">
                                                     <Typography className='bodyTypo' variant="body1">
                                                         Midnight - 04AM
                                                 </Typography>

@@ -1,5 +1,5 @@
 .barContainer{
-    width: 60vh !important;
+    width: 90% !important;
     height: 50vh !important;
     background: white;
     padding: 30px 20px 10px 20px !important;
@@ -12,7 +12,7 @@
 
 @media only screen and (max-width: 600px) {
     .barContainer {
-        width: 40vh !important;
+        width: 100% !important;
         height: 40vh !important;
     }
 }
